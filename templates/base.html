@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% end %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{static_url('css/style.css')}}">
+</head>
+<body>
+    <header>
+        {% block header %} {% end %}
+    </header>
+    <content>
+        {% block body %} {% end %}
+    </content>
+    <footer>
+        {% set website = "<a href='https://www.baidu.com'>百度</a>" %}
+        {% raw website %}
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{{static_url('js/script.js')}}" ></script>
+</body>
+</html>

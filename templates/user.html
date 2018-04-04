@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block title %} 用户信息 {% end %}
+
+{% block header %}
+    <h2>用户信息</h2>
+{% end %}
+
+{% block body %}
+    <ul>
+        {% if users %}
+            {% for u in users %}
+                <li>id:{{u[0]}}</li>
+                <li>用户名:{{u[1]}}</li>
+                <li>密码: {{u[2]}}</li>
+                <li>邮箱: {{u[3]}}</li>
+            {% end %}
+        {% else %}
+            用户已过期
+        {% end %}
+    </ul>
+{% end %}
